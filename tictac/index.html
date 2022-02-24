@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Jogo da velha</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="players">
+                <span>x</span>
+                <span class="p2">o</span>
+            </div>
+            <div class="turn">
+                <p class="changePlayer">X</p>
+                <p>Joga</p>
+            </div>
+            <div class="restart"><div onclick="restart()" class="containerImg"><img src="./icon.png" alt="Restart"></div></div>
+        </div>
+        <div class="display">
+            <input class="cx1" type="text" value="" />
+            <input class="cx1" type="text" value="" />
+            <input class="cx1" type="text" value="" />
+            <input class="cx2" type="text" value="" />
+            <input class="cx2" type="text" value="" />
+            <input class="cx2" type="text" value="" />
+            <input class="cx3" type="text" value="" />
+            <input class="cx3" type="text" value="" />
+            <input class="cx3" type="text" value="" />
+        </div>
+
+        <div class="container-modal">
+            <div class="modal">
+                <div class="title">
+                    <p class="velha">O jogador --- <span class="resposta">resposta</span> --- venceu</p>
+                </div>
+                <div class="gameOver">
+                    <p class="gameOverMensage">Fim de jogo</p>
+                </div>
+                <div class="optionsNewGame">
+                    <button onclick="restart()">Novo jogo</button>
+                    <button onclick="winner(false)">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/015a1db8b7.js" crossorigin="anonymous"></script>
+</body>
+</html>

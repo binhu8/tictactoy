@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2, 41, 46);
+    flex-direction: column;
+}
+
+.display{
+    width: 380px;
+    padding: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cx1, .cx2, .cx3{
+    width: calc(300px/3);
+    height:calc(300px/3);
+    background: rgb(51, 80, 88);
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 0px 0px rgb(44, 57, 77);
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 65px;
+    font-family: 'Varela Round';
+    font-weight: 1000;
+    color: rgb(74, 207, 201);
+    text-transform: uppercase;
+    -webkit-text-stroke: 7.5px rgb(74, 207, 201);
+    color: transparent;
+    transition: 0.3s;
+}
+
+.cx1.p2, .cx2.p2, .cx3.p2{
+    -webkit-text-stroke: 7.5px  rgb(255, 208, 0);
+    transition: 0.3s;
+}
+
+
+.row{
+    width: 345px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.players {
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 40px;
+    -webkit-text-stroke: 3.5px rgb(74, 207, 201);
+    font-family: 'Varela Round';
+    cursor: default;
+    
+}
+
+.players .p2{
+    -webkit-text-stroke: 3.5px  rgb(255, 208, 0);
+}
+
+.turn{
+    width: 130px;
+    height: 100%;
+    background: rgb(51, 80, 88);
+    box-shadow: 0px 5px 0px 0px rgb(44, 57, 77);
+    border-radius: 10px;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    justify-content: space-between;
+
+}
+
+.restart{
+    width: 50px;
+    height: 50px;
+    background:  rgba(247, 247, 247, 0.603);
+    box-shadow: 0px 5px 0px 0px rgba(44, 57, 77, 0.712);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.restart:hover{
+    width: 50px;
+    height: 50px;
+    box-shadow: none;
+    background: rgba(247, 247, 247, 0.856);
+    transition: 0.4s;
+}
+
+.restart img{
+    width: 30px;
+    height: 30px;
+    transform: scaleX(-1);
+    
+}
+
+
+.restart .containerImg:hover{
+    transform: rotate(360deg);
+    transition: 0.3s;
+}
+
+
+.turn p{
+    color:  rgba(247, 247, 247, 0.856);
+    font-size: 25px;
+    font-family: 'Varela Round';
+    cursor: default;
+}
+.changePlayer{
+    font-size: 30px;
+    font-family: 'Varela Round';
+    -webkit-text-stroke: 3.5px  rgba(247, 247, 247, 0.856);
+    cursor: default;
+    text-transform: uppercase;
+}
+
+.container-modal{
+    display: none;
+}
+
+.modal.show{
+    width: 350px;
+    height: 350px;
+    background: #fafafa;
+    position: absolute;
+    border-radius: 10px;
+    animation: winner 0.2s ease ;
+    padding: 1rem;
+    transition: 0.4s;
+}
+
+.container-modal.show{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(51, 80, 88, 0.815);
+    transition: 0.8s;
+
+}
+
+.modal .title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Varela Round';
+    color: #333;
+    font-size: 20px;
+}
+
+.gameOver p {
+    font-family: 'Varela Round';
+    color: transparent;
+    font-size: 50px;
+    -webkit-text-stroke: 5.5px rgb(90, 90, 90);
+    width: 100%;
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.resposta{
+    text-transform: uppercase;
+    -webkit-text-stroke: 4.5px rgb(109, 109, 109);
+    color: transparent;
+}
+
+.optionsNewGame{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+}
+
+.optionsNewGame button{
+    width: 100px;
+    height: 40px;
+    box-shadow: 0px 5px 0px 0px rgb(44, 57, 77);
+    border-radius: 5px;
+    background: rgb(28, 184, 28);
+    color: #fafafa;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+}
+
+.optionsNewGame button:last-child{
+    width: 100px;
+    height: 40px;
+    box-shadow: 0px 5px 0px 0px rgb(44, 57, 77);
+    border-radius: 5px;
+    background: rgb(184, 46, 28);
+    color: #fafafa;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    
+}
+
+@keyframes winner {
+    0%{
+        transform: translateY(-101%);
+    }100%{
+        transform: translateY(0);
+    }
+}
